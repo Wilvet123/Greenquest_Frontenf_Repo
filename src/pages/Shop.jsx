@@ -34,15 +34,22 @@ const Shop = () => {
       {/* Banner Image */}
       <img src={RebirthOfIdah} alt="Rebirth of Idah" className='pt-16 w-full object-cover' />
 
-      <div className='flex gap-4 absolute top-24 right-16'>
-        <Link to='/login'>
-          <button className='px-2 py-1 text-sm rounded bg-blue-600 text-white'>Sign In</button>
-        </Link>
-      </div>
+      <div className='absolute top-24 right-4 md:right-16 flex items-center gap-4'>
+  {!user && (
+    <Link to='/login'>
+      <button className='px-2 py-1 text-sm rounded bg-blue-600 text-white'>
+        Sign In
+      </button>
+    </Link>
+  )}
+
+  {user && <CartCard />}
+</div>
+
 
       {/* All Products Section */}
       <h1 className='py-7 text-2xl font-bold mx-10'>All Products</h1>
-      <div className='flex flex-wrap justify-center gap-12 px-10'>
+      <div className='flex flex-wrap justify-center gap-12 lg:gap-28 px-10 pb-16'>
         {Array.isArray(products) && products.map((item) => (
           <div key={item._id} className='h-64 w-56 rounded-lg shadow-md p-2'>
             <img src={item.image} alt={item.name} className='h-36 w-full rounded-md object-cover mb-3' />
@@ -58,7 +65,6 @@ const Shop = () => {
       </div>
 
       {/* Cart Panel */}
-      {user && <CartCard />}
     </div>
   )
 };

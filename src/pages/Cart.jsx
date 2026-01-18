@@ -79,7 +79,7 @@ const Cart = () => {
   }, [cartItems]);
 
   return (
-    <div className="my-10 px-4 md:px-10 lg:px-20">
+    <div className="my-20 px-4 md:px-10 lg:px-20">
       {cartItems.length === 0 ? (
         <div className='p-4 w-full max-w-md mx-auto shadow-md flex flex-col justify-center items-center'>
           <div className='flex items-center justify-center text-3xl mb-4'>
@@ -93,27 +93,25 @@ const Cart = () => {
         <div className='flex flex-col md:flex-row gap-10'>
           <div className='w-full md:w-1/2'>
             <h1 className="text-2xl font-bold">Preorder Form</h1>
-            <h2 className="text-lg text-gray-700">Be among the first to experience the best.</h2>
+            <h2 className="text-lg text-gray-700 mb-7">Be among the first to experience the best.</h2>
             <ShoppingForm subtotal={subtotal} />
           </div>
 
           <div className='w-full md:w-1/2'>
-            <h1 className='font-semibold text-lg mb-4 border-b border-gray-300'>Order Summary</h1>
+            <h1 className='pb-4 mb-4 border-b border-gray-300 text-2xl font-bold'>Order Summary</h1>
             <ItemsAdded
               cartItems={cartItems}
               onQtyChange={handleQtyChange}
               onRemoveItem={handleRemoveItem}
             />
-            <h1 className="mt-6 pt-4 border-t border-gray-300 flex justify-between font-semibold">
+            <h1 className="mt-6 pt-4 border-t border-gray-300 flex text-lg justify-between font-semibold">
               <span>Subtotal</span>
               <span>₦{subtotal.toLocaleString()}</span>
             </h1>
-            <h1 className="flex justify-between font-semibold">
-              <span>Total</span>
-              <span>₦{subtotal.toLocaleString()}</span>
-            </h1>
-            <Link to='/shop'>
-              <button className='mt-4 px-4 py-2 w-full md:w-1/2 text-sm rounded-lg border border-blue-600 text-blue-600'>
+            
+            <p className="py-4 text-lg"> The item ships on 24-06-2026</p>
+            <Link to='/shop' className="flex items-center justify-center">
+              <button className='mt-14   px-4 py-2 w-full md:w-1/2 text-sm rounded-lg border border-blue-600 text-blue-600'>
                 Continue Shopping
               </button>
             </Link>

@@ -105,11 +105,11 @@ const SignIn = () => {
           Forgot password?
         </Link>
 
-        <div className="flex justify-center gap-5 text-gray-500">
+        {/* <div className="flex justify-center gap-5 text-gray-500">
           <FaGoogle size={30} />
           <FaFacebook size={30} />
           <FaApple size={30} />
-        </div>
+        </div> */}
 
         <p className="text-center">
           Don't have an account?{" "}

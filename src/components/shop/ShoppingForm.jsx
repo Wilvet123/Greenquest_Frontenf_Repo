@@ -130,7 +130,7 @@ const ShoppingForm = ({ subtotal }) => {
   };
 
   return (
-    <div className="max-w-lg mx-auto space-y-4">
+    <div className="max-w-lg space-y-4">
       {[
         { name: "name", placeholder: "Name" },
         { name: "email", placeholder: "Email" },
@@ -140,6 +140,8 @@ const ShoppingForm = ({ subtotal }) => {
         { name: "state", placeholder: "State" },
         { name: "country", placeholder: "Country" },
       ].map((field) => (
+        <div>
+           <label className="font-semibold">{field.placeholder}</label>
         <input
           key={field.name}
           name={field.name}
@@ -148,6 +150,8 @@ const ShoppingForm = ({ subtotal }) => {
           placeholder={field.placeholder}
           className="border p-2 w-full rounded"
         />
+          </div>
+       
       ))}
 
       <button

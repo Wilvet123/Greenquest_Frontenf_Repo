@@ -108,8 +108,8 @@ const [quantity, setQuantity] = useState(1);
 
   // -------------------- UI --------------------
   return (
-    <div className="flex justify-center items-center my-24">
-      <div className="h-auto w-80 shadow-md justify-center mx-24 px-4 py-4">
+    <div className="flex justify-center items-center my-24 w-full">
+      <div className="h-auto w-80 shadow-md justify-center lg:mx-24 px-4 py-4">
         <img src={item.image} alt={item.name} className="w-full" />
 
         <div className="flex justify-between py-4">
@@ -117,9 +117,11 @@ const [quantity, setQuantity] = useState(1);
           <h1>${item.price}</h1>
         </div>
 
-        {/* Size & Color Selection */}
-        {hasVariants && (
-          <div className="flex justify-between mb-4">
+{/* Size & Color Selection */}
+{hasVariants && (
+  <div className='flex flex-col gap-4'>
+
+<div className="flex justify-between mb-4">
             <div className="flex flex-col">
               <h2 className="mb-2">Select Color:</h2>
               <div className="flex gap-2">
@@ -155,8 +157,11 @@ const [quantity, setQuantity] = useState(1);
               </div>
             </div>
           </div>
+          </div>
+
         )}
 
+        
         {/* Quantity Selector */}
         <div className="py-4">
           <h2>Quantity:</h2>

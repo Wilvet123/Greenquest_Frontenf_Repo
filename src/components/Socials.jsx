@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaFacebook, FaTwitter, FaLinkedinIn, FaInstagram, FaTiktok } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaLinkedinIn, FaInstagram, FaTiktok, FaDiscord } from "react-icons/fa";
 
 const Socials = () => {
   return (
@@ -9,7 +9,7 @@ const Socials = () => {
             <li ><a href='https://www.instagram.com/greenquestinnovations?igsh=N3cyYnZ5aW9zMnRn&utm_source=qr' target="_blank"><FaInstagram size={25}/></a></li>
             <li><a href='https://www.linkedin.com/company/greenquest/' target="_blank"><FaLinkedinIn size={25}/></a></li>
             <li><a href='https://www.tiktok.com/@greenquestgames?_t=ZM-8vapAgY3oYw&_r=1' target="_blank"><FaTiktok size={25}/></a></li>
-            <li ><a href='https://discord.com/invite/34JGRh38F4?fbclid=PAAaZ9q4IcgbN5XsoiGXKXiVhUiHziu-gR8qQGIoAgLEkxh_sfsVwYtrVwAFo'><FaFacebook size={25}/></a></li>
+            <li ><a href='https://discord.com/invite/34JGRh38F4?fbclid=PAAaZ9q4IcgbN5XsoiGXKXiVhUiHziu-gR8qQGIoAgLEkxh_sfsVwYtrVwAFo'><FaDiscord size={25}/></a></li>
         </ul> 
     </div>
   )

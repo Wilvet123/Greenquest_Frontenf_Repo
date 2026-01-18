@@ -1,4 +1,4 @@
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation, matchPath } from "react-router-dom";
 import Home from "./components/Home";
 import Socials from './components/Socials';
 import Footer from './components/Footer';
@@ -29,8 +29,9 @@ import PaymentCallback from "./pages/PaymentCallback";
 import ShopFooter from "./components/shop/ShopFooter";
 function App() {
   const location = useLocation();
-  const shopPaths = ["/shop", "/cart", "/privacy-policy", "/customer-support"];
-  const isShopPage = shopPaths.includes(location.pathname);
+  const isShopPage =
+  matchPath("/item/:id", location.pathname) ||
+  ["/shop", "/cart", "/privacy-policy", "/customer-support"].includes(location.pathname);  
 
   return (
     <div className="overflow-hidden">

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaFacebook, FaTwitter, FaLinkedinIn, FaInstagram, FaTiktok} from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaLinkedinIn, FaInstagram, FaTiktok, FaDiscord} from "react-icons/fa";
 import logo from '../../assets/gq-innovation-logo.png';
 import googleplay from '../../assets/features/googleplay.png';
 import appstore from '../../assets/features/appstore.png';
@@ -52,7 +52,7 @@ const ShopFooter = () => {
             </a></li>
           <li>
             <a href='https://discord.com/invite/34JGRh38F4?fbclid=PAAaZ9q4IcgbN5XsoiGXKXiVhUiHziu-gR8qQGIoAgLEkxh_sfsVwYtrVwAFo' target='_blank' rel="noreferrer">
-              <FaFacebook size={21} className='rounded-full text-white bg-primaryGreen p-1 text-center' />
+              <FaDiscord size={21} className='rounded-full text-white bg-primaryGreen p-1 text-center' />
             </a>
           </li>
         </ul>

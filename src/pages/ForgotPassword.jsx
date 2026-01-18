@@ -35,7 +35,7 @@ const ForgotPassword = () => {
     } else setEmailError('');
 
     try {
-      const res = await api.post('/users/forgot-password', { email });
+      const res = await api.post('/api/users/forgot-password', { email });
       localStorage.setItem('resetEmail', email);
       setMessage(res.data.message || 'Reset code sent to your email!');
     } catch (err) {
@@ -54,7 +54,7 @@ const ForgotPassword = () => {
     } else setCodeError('');
 
     try {
-      const res = await api.post('/users/verify-reset-code', { email, code });
+      const res = await api.post('/api/users/verify-reset-code', { email, code });
       if (res.status === 200) {
         setIsCodeVerified(true);
         alert('Code verified successfully!');
@@ -78,7 +78,7 @@ const ForgotPassword = () => {
     } else setPasswordError('');
 
     try {
-      const res = await api.post('/users/reset-password', { email, code, newPassword });
+      const res = await api.post('/api/users/reset-password', { email, code, newPassword });
       if (res.status === 200) {
         alert(res.data.message || 'Password reset successful!');
         localStorage.removeItem('resetEmail');
@@ -97,18 +97,18 @@ const ForgotPassword = () => {
       {!isCodeVerified && (
         <form onSubmit={handleSubmit} className="flex flex-col shadow-lg p-6 w-full max-w-md bg-white rounded-lg">
           <h1 className="text-blue-500 text-xl md:text-2xl mb-4">Forgot Password</h1>
-          <label className="text-gray-500 mb-2">Email Address</label>
+          <label className="text-gray-500 mb-2">Type your email address</label>
           <input
             type="email"
-            placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="bg-gray-100 p-3 border border-gray-400 rounded-md text-blue-600 mb-1"
             required
           />
+<p></p>
           {emailError && <p className="text-red-500 text-sm mb-2">{emailError}</p>}
           <button type="submit" className="py-2 w-full text-sm rounded-md bg-blue-600 text-white hover:bg-blue-700 transition">
-            Send Reset Code
+            Send 
           </button>
           {message && <p className="mt-4 text-center text-gray-600">{message}</p>}
         </form>

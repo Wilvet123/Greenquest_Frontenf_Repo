@@ -13,7 +13,7 @@ export const createUser = async (data) =>{
 }
 
 export const getAllUsers = async (data) =>{
-    const res = await api.get("api//users/", data)
+    const res = await api.get("api/users/", data)
     return res.data
 }
 
