@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSearchParams, Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { clearCart } from "../cart/CartSlice";
+import { clearCart } from "../cart/cartSlice";
 import api from "../api/axios";
 import successImage from '../assets/payment-success.png';
 const PaymentSuccess = () => {

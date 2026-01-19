@@ -6,11 +6,11 @@
   import emptyCart from '../assets/gqshop/empty-cart.png'
   import ItemsAdded from './ItemsAdded'
   import axios from 'axios'
-  import { removeFromCart, updateQuantity } from "../cart/CartSlice";
+  import { removeFromCart, updateQuantity } from "../cart/cartSlice";
   import { Link, useNavigate } from "react-router-dom";
   import { useAuth } from "../context/AuthContext";
   import { getCartByUser, updateCart, deleteCartItem } from "../api/cart";
-  import { setCartItems } from "../cart/CartSlice";
+  import { setCartItems } from "../cart/cartSlice";
 
   const CartCard = () => {
     const cartItems = useSelector((state) => state.cart.cartItems)

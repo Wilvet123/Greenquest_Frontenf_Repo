@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { addToCart } from '../cart/CartSlice';
+import { addToCart } from '../cart/cartSlice';
 import { getProductById } from '../api/product';
 import { addToUserCart } from '../api/cart';
 import { useAuth } from '../context/AuthContext';   // ✅ NEW

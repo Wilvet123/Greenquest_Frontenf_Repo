@@ -6,7 +6,7 @@ import emptyCart from '../assets/gqshop/empty-cart.png';
 import ItemsAdded from "../components/ItemsAdded";
 import ShoppingForm from "../components/shop/ShoppingForm";
 import { getCartByUser, updateCart, deleteCartItem } from "../api/cart";
-import { setCartItems } from "../cart/CartSlice";
+import { setCartItems } from "../cart/cartSlice";
 import { useAuth } from "../context/AuthContext";
 
 const Cart = () => {

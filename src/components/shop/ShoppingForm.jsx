@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { clearCart } from "../../cart/CartSlice";
+import { clearCart } from "../../cart/cartSlice";
 import { useNavigate, useLocation } from "react-router-dom";
 import { createOrder } from "../../api/order";
 import api from "../../api/axios";
